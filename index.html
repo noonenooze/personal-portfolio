@@ -1,0 +1,448 @@
+<!-- 
+
+ Author/s: Noozee (@noonenooze)
+ Date Authored: 22.06.25, 7:39AM(PHT)
+#78bdcb blue
+#ee94ba pink  
+ -->
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ho ho, ppl</title>
+<link rel="icon" href="https://64.media.tumblr.com/d631d8d668541792523fd954362ca380/4d506544e94ea5c0-46/s1280x1920/48b7aee7890f0e5e69149c880d81389ff670265f.pnj" type="logo"> 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 40px auto;
+    max-width: 520px;
+    color: #242424;
+    background: #fff;
+    line-height: 1.3;
+  }
+
+  small {
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+  }
+
+  header img {
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .user-info {
+    flex-grow: 1;
+  }
+
+  .user-info strong {
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: -0.015em;
+  }
+
+  .user-pronouns {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 0.05rem 0 0.2rem 0;
+    line-height: 1.2;
+  }
+
+  .user-description {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.35rem;
+  }
+  .user-description span {
+    font-weight: 300;
+  }
+
+  /* Social Links */
+  .social-links {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .social-links a {
+    text-decoration: underline;
+    color: #555;
+    margin-right: 0.3rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .social-links a:hover {
+    color: #78bdcb ;
+  }
+
+  /* Buttons */
+  .buttons {
+    display: flex;
+    gap: 0.6rem;
+    margin: 1rem 0 1.2rem 0;
+  }
+  button {
+    flex: 1 1 0;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.25s ease;
+  }
+  .btn-follow {
+    background-color: #ee94ba;
+    color: white;
+  }
+  .btn-follow:hover {
+    background-color: #78bdcb;
+  }
+  .btn-message {
+    background-color: #bbb;
+    color: #3a3a3a;
+  }
+  .btn-message:hover {
+    background-color: #cecece;
+  }
+
+  /* Left and Right columns container */
+  .main-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Left column - user tags sections */
+  .tags-section {
+    width: 50%;
+    font-size: 0.86rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .tags-section strong {
+    font-weight: 700;
+    color: #78bdcb;
+  }
+  .tags-section i {
+    font-style: italic;
+  }
+  .tags-group {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Right column - recent activity */
+  .recent-activity {
+    width: 50%;
+  }
+
+  .recent-activity-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.24rem;
+    border-bottom: 2px solid #ee94ba;
+    padding-bottom: 0.1rem;
+  }
+
+  .recent-list {
+    margin-top: 10px;
+  }
+
+  .recent {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    margin-bottom: 1.22rem;
+  }
+
+  .recent img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .recent-text {
+    flex-grow: 1;
+  }
+
+  .recent-name {
+    font-weight: 700;
+    font-size: 0.96rem;
+    margin: 0 0 0.08rem 0;
+  }
+
+  .recent-time {
+    font-size: 0.8rem;
+    color: #777;
+    font-weight: 600;
+    margin-left: auto;
+    white-space: nowrap;
+    padding-left: 0.10rem;
+  }
+
+  .recent-desc, .recent-music {
+    font-size: 0.85rem;
+    color: #7a7a7a;
+    font-weight: 300;
+    line-height: 1.15;
+    margin: 1px 0;
+  }
+  .recent-music {
+    font-weight: 500;
+  }
+
+  .recent-credit {
+    font-weight: 300;
+    font-size: 0.75rem;
+    opacity: 0.75;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1.4px solid #78bdcb;
+    margin: 0.15rem 0 1.8rem 0;
+  } 
+
+  /* Public Playlists */
+  .public-playlists {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .public-playlists-hr {
+    border: none;
+    border-top: 2px solid #ee94ba;
+    margin-bottom: 1rem;
+  }
+
+  .playlists-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .playlist {
+    flex: 1;
+    font-size: 0.82rem;
+    line-height: 1.18;
+  }
+
+  .playlist img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.56rem;
+  }
+
+  .playlist strong {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
+    display: inline-block;
+    font-size: 0.9rem;
+  }
+
+  .playlist {
+  flex: 1;
+  font-size: 0.82rem;
+  line-height: 1.18;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playlist:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-weight: 300;
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 2.2rem;
+    user-select: none;
+  }
+@media (max-width: 800px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px auto;  
+    }
+
+    .main-section {
+        flex-direction: column; 
+        gap: 1rem; 
+    }
+
+    .tags-section, .recent-activity {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem; 
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    header img {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .user-info strong {
+        font-size: 1.2rem; 
+    }
+
+    .user-info {
+        text-align: left; 
+    }
+}
+
+
+</style>
+</head>
+<body>
+<header>
+  <img src="https://64.media.tumblr.com/72a3bd4a80dfc20b87a68f668711f467/2c6a5589c02ce6f6-d5/s1280x1920/5302e6af5048ee24907431b71e1057a817ef1355.pnj" alt="User profile picture" />
+  <div class="user-info">
+    <small>ABOUT THIS USER</small>
+    <div><strong>noozee !</strong></div>
+    <div class="user-pronouns">agender</div>
+    <div class="user-description">
+      <span>—</span> twentyone istj 6w5
+    </div>
+    <div class="social-links" aria-label="Social media links">
+      <a href="https://open.spotify.com/user/31g7zadz34yt5b7tvxowme5jhz5e?si=8ecbf713460f4e2d" tabindex="0" rel="noopener noreferrer">spotify</a>
+      <a href="https://github.com/noonenooze" tabindex="0" rel="noopener noreferrer">github</a>
+      <a href="https://www.facebook.com/profile.php?id=61574794265014" tabindex="0" rel="noopener noreferrer">facebook</a>
+    </div>
+  </div>
+</header>
+
+<div class="buttons">
+  <button class="btn-follow" type="button" aria-label="Follow user" onclick="window.location.href='https://www.facebook.com/profile.php?id=61574794265014'">
+  add
+</button>
+  <button class="btn-message" type="button" aria-label="Send message to"
+    onclick="window.open('https://m.me/dswdserves', '_blank')">
+    message
+  </button>
+</div>
+
+<div class="main-section" role="main">
+  <section class="tags-section" aria-label="User descriptions and tags">
+    <div class="tags-group"><strong>about!</strong> uhh </div>
+    <div class="tags-group"><strong>bya</strong> op related stuff, heavy profanity, art, coding, contents </div>
+    <div class="tags-group"><strong>dna:</strong> fetishizer, sexualizer, body-shamer, face-shamer, backstabber,cheater,  ableist, DDS and BBM apologist, misogynist, and someone with an inferiority complex and prejudice against women.
+
+</div>
+  </section >
+
+  <aside class="recent-activity" aria-label="recent activity">
+    <div class="recent-activity-title">Recent Activity</div>
+    <hr class="divider" />
+    <div class="recent-list">
+      <div class="recent">
+        <img src="https://64.media.tumblr.com/d9c4551c278d3bf18f94cfe4afd33199/2c6a5589c02ce6f6-6a/s1280x1920/aa0abacce661cbb404cd35dde792b7f806fe628d.pnj" alt="Profile picture" />
+        <div class="recent-text">
+          <div class="recent-name">Vibe Coding</div>
+          <div class="recent-desc">@noonenooze</div>
+          <div class="recent-music">NOO ZEE</div>
+          <div class="recent-credit">GitHub</div>
+        </div>
+        <div class="recent-time" aria-label="2 hours ago">2h</div>
+      </div>
+      <div class="recent">
+        <img src="https://64.media.tumblr.com/7084699d7c98cd8b5e7318da8d6cff15/2c6a5589c02ce6f6-5b/s1280x1920/04f7e6549c4cafdf40589e71a5683fb4707b9e30.pnj" alt="Profile picture" />
+        <div class="recent-text">
+          <div class="recent-name">Mobile Legends</div>
+          <div class="recent-desc">Noozee</div>
+          <div class="recent-credit">© IDK </div>
+        </div>
+        <div class="recent-time" aria-label="10 minutes ago">1h</div>
+      </div>
+      <div class="recent">
+        <img src="https://64.media.tumblr.com/6c19d8ce7f19b04be5d5ce4956706a08/2c6a5589c02ce6f6-7c/s640x960/bacdb0a80d0cc14fa348bc913a5a1b02ea25a926.jpg" alt="Profile picture" />
+        <div class="recent-text">
+          <div class="recent-name">Roblox</div>
+          <div class="recent-desc">@noonenooze</div>
+          <div class="recent-credit">Noowi</div>
+        </div>
+        <div class="recent-time" aria-label="17 minutes ago">17m</div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<hr class="public-playlists-hr" />
+<div class="public-playlists">Recommended Playlists</div>
+<div class="playlists-container" role="list">
+
+<div class="playlist" role="listitem" tabindex="0" aria-label="Playlist ULT"
+     onclick="window.open('https://open.spotify.com/playlist/3uPOh83aPDAfQKfDmjsJg4?si=pxbAOANcSfii4EnXApkLtg', '_blank')"
+     style="cursor: pointer;">
+  <img src="https://64.media.tumblr.com/0899d75f1fdc5fee9609311d398f5446/2c6a5589c02ce6f6-ce/s640x960/1b31e39ca9c3dc36ece89cfbc6ff12f1eb946213.jpg" alt="User photo with black shirt" />
+  <div><strong>ULT</strong> nct seventeen red velvet stayc day6 the boyz lesserafim wjsn</div>
+</div>
+
+
+<div class="playlist" role="listitem" tabindex="0" aria-label="Playlist ULT"
+     onclick="window.open('https://open.spotify.com/playlist/68lWY1dQ7EnM5AWzM4l0Dl?si=7v8sLk2ESMyagZjAmhb2-Q', '_blank')"
+     style="cursor: pointer;">
+  <img src="https://64.media.tumblr.com/b2edd86255cb1bbc40b2e624fb5f1595/2c6a5589c02ce6f6-f4/s1280x1920/714bbd004df904be0440c2ebf3f74e626da504b8.pnj" alt="User photo with black shirt" />
+  <div><strong>ULT</strong> nct seventeen red velvet stayc day6 the boyz lesserafim wjsn</div>
+</div>
+
+<div class="playlist" role="listitem" tabindex="0" aria-label="Playlist ULT"
+     onclick="window.open('https://open.spotify.com/user/31g7zadz34yt5b7tvxowme5jhz5e?si=8ecbf713460f4e2d', '_blank')"
+     style="cursor: pointer;">
+  <img src="https://64.media.tumblr.com/3615b0e06c75fe2f2ec9977bb53c3611/2c6a5589c02ce6f6-d3/s1280x1920/1f20fa278a3f62d58dc154dbde31c5e5fe367a7d.pnj" alt="User photo with black shirt" />
+  <div><strong>ULT</strong> for more playlist!</div>
+</div>
+  </div>
+</div>
+
+<footer aria-label="Page footer">( made by @noonenooze ) </br> ib : @everynvu </br> pictures from tumblr</footer>
+
+</body>
+</html>
